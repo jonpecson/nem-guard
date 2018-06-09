@@ -1,17 +1,13 @@
-<!-- <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Component Example
-    </ion-title>
-  </ion-navbar>
-</ion-header> -->
-
 <ion-content class="no-scroll" no-padding no-bounce>
-  <div text-center *ngIf="!ShowPin">
-     <button ion-button clear large (click)="showPin()">Enter Pin</button>
-     <br>
-     <label *ngIf="Pin">Pin entered is {{Pin}}</label>
-  </div>
+  <ion-grid text-center *ngIf="!ShowPin">
+    <ion-row align-items-center>
+      <ion-col>
+        <button ion-button clear large (click)="showPin()">Enter Pin</button>
+        <br>
+        <label *ngIf="Pin">Pin entered is {{Pin}}</label>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
-<custom-pin *ngIf="ShowPin" pagetitle="Enter The Pin" (change)="eventCapture($event)"></custom-pin>
+  <custom-pin *ngIf="ShowPin" pagetitle="Enter The Pin" (change)="eventCapture($event)"></custom-pin>
 </ion-content>

@@ -1,77 +1,71 @@
+<ion-grid no-padding no-bounce>
+  <ion-row upper>
+    <ion-col col-12>
+      <section text-center padding>
+        <h2>ENTER YOUR PIN CODE </h2>
+        <p>In order to continue you must enter your pin code</p>
+      </section>
+      <div pin text-center large margin-vertical>
+        <ion-icon [name]="pin.length>0 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+        <ion-icon [name]="pin.length>1 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+        <ion-icon [name]="pin.length>2 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+        <ion-icon [name]="pin.length>3 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+      </div>
+    </ion-col>
+  </ion-row>
 
-  <ion-grid no-padding no-bounce>
-    <ion-row>
-      <ion-col col-12 style="background:gray !important; height: 45vh !important;">
-        <div text-center large margin-vertical dark>
-          <ion-icon [name]="pin.length>0 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
-          <ion-icon [name]="pin.length>1 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
-          <ion-icon [name]="pin.length>2 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
-          <ion-icon [name]="pin.length>3 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
-        </div>
-      </ion-col>
-
-    </ion-row>
-
-    <ion-row>
-      <ion-col col-12 style="background:#000 !important; height: 55vh !important;">
-        <ion-grid text-center>
-          <ion-row>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('1')">1</button>
-            </ion-col>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('2')">2</button>
-            </ion-col>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('3')">3</button>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('4')">4</button>
-            </ion-col>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('5')">5</button>
-            </ion-col>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('6')">6</button>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('7')">7</button>
-            </ion-col>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('8')">8</button>
-            </ion-col>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('9')">9</button>
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-
-            </ion-col>
-            <ion-col>
-              <button ion-button round small clear color="light" outline (click)="handleInput('0')">0</button>
-            </ion-col>
-            <ion-col>
-
-            </ion-col>
-          </ion-row>
-          <ion-row>
-            <ion-col>
-              <button ion-button clear small no-padding color="light" (click)="handleInput('clear')">Clear</button>
-            </ion-col>
-            <ion-col>
-
-            </ion-col>
-            <ion-col>
-              <button ion-button clear small (click)="emitEvent()" color="light">OK</button>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-col>
-    </ion-row>
-  </ion-grid>
-
+  <ion-row lower>
+    <ion-col col-12>
+      <ion-grid text-center>
+        <ion-row>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('1')">1</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('2')">2</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('3')">3</button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('4')">4</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('5')">5</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('6')">6</button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('7')">7</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('8')">8</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('9')">9</button>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="erase()">
+              <ion-icon name="backspace"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="handleInput('0')">0</button>
+          </ion-col>
+          <ion-col>
+            <button ion-button clear small clear color="light" (click)="emitEvent()">
+              <ion-icon name="checkmark"></ion-icon>
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-col>
+  </ion-row>
+</ion-grid>

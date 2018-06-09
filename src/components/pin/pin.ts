@@ -23,9 +23,11 @@ export class PinComponent {
       return;
     }
 
-    if (this.pin.length === 4) {
-      return;
-    }
+    if (this.pin.length === 4) return;
     this.pin += pin;
+  }
+
+  erase() {
+    if(this.pin.length) this.pin = this.pin.slice(0, -1);
   }
 }

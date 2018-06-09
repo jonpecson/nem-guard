@@ -1,33 +1,41 @@
-pin {
-    //  [light] {
-    //     background: grey !important;
-    // }
-    .scroll-content {
-        padding: 0px !important;
+.ios,
+.md {
+  custom-pin {
+    ion-grid,
+    ion-row {
+      height: 100%;
     }
-    .item-inner {
-        padding-right: 0px !important;
+
+    [upper] {
+      background: linear-gradient(
+        to left top,
+        lighten(color($colors, dark), 20%),
+        lighten(color($colors, dark), 30%)
+      );
+
+      ion-col {
+        color: lighten(color($colors, dark), 70%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      }
+
+      [pin] {
+        font-size: 2.5rem;
+        letter-spacing: 16px;
+      }
     }
-    .dark-bg {
-        background: #000 !important; // background-color: #000 !important;
+
+    [lower] {
+      background: linear-gradient(
+        lighten(color($colors, dark), 10%),
+        color($colors, dark)
+      );
+      padding-top: 1rem;
+
+      button {
+        font-size: 150%;
+      }
     }
-    .gray-bg {
-        height: 100%;
-        background: grey !important; // background-color: #000 !important;
-    }
-    .wrap {
-        width: 100%;
-    }
-    .top {
-        float: left;
-        width: 100%;
-        background-color: #ff0000 !important;
-        height: 50vh !important;
-    }
-    .bottom {
-        float: right;
-        background-color: #00ff00 !important;
-        height: 50vh !important;
-        width: 100%;
-    }
+  }
 }
