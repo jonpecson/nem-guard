@@ -1,14 +1,17 @@
-<ion-header>
+<!-- <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic Component Example
     </ion-title>
   </ion-navbar>
-</ion-header>
+</ion-header> -->
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content class="no-scroll" no-padding no-bounce>
+  <div text-center *ngIf="!ShowPin">
+     <button ion-button clear large (click)="showPin()">Enter Pin</button>
+     <br>
+     <label *ngIf="Pin">Pin entered is {{Pin}}</label>
+  </div>
+
+<custom-pin *ngIf="ShowPin" pagetitle="Enter The Pin" (change)="eventCapture($event)"></custom-pin>
 </ion-content>
