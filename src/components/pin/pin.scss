@@ -1,6 +1,8 @@
 .ios,
 .md {
   custom-pin {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
     ion-grid,
     ion-row {
       height: 100%;
@@ -20,8 +22,16 @@
         justify-content: center;
       }
 
+      [ion-button] {
+        height: 5rem;
+        width: 5rem;
+        box-shadow: 0 1px 8px 0 color($colors, dark);
+        border: 0;
+        border-radius: .5rem;
+      }
+
       [pin] {
-        font-size: 2.5rem;
+        font-size: 4rem;
         letter-spacing: 16px;
       }
     }
@@ -33,7 +43,7 @@
       );
       padding-top: 1rem;
 
-      button {
+      [ion-button] {
         font-size: 150%;
       }
     }

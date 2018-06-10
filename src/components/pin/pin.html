@@ -6,10 +6,18 @@
         <p>In order to continue you must enter your pin code</p>
       </section>
       <div pin text-center large margin-vertical>
-        <ion-icon [name]="pin.length>0 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
-        <ion-icon [name]="pin.length>1 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
-        <ion-icon [name]="pin.length>2 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
-        <ion-icon [name]="pin.length>3 ? 'radio-button-on' : 'radio-button-off'"></ion-icon>
+        <button ion-button large outline color="dark">
+          <span ion-text color="light">{{ pin[0] }}</span>
+        </button>
+        <button ion-button large outline color="dark">
+          <span ion-text color="light">{{ pin[1] }}</span>
+        </button>
+        <button ion-button large outline color="dark">
+          <span ion-text color="light">{{ pin[2] }}</span>
+        </button>
+        <button ion-button large outline color="dark">
+          <span ion-text color="light">{{ pin[3] }}</span>
+        </button>
       </div>
     </ion-col>
   </ion-row>

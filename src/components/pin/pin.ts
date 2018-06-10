@@ -14,7 +14,7 @@ export class PinComponent {
   constructor() {}
 
   emitEvent() {
-    this.change.emit(this.pin);
+    if(this.pin.length === 4) this.change.emit(this.pin);
   }
 
   handleInput(pin: string) {
